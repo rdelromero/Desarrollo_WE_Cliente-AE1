@@ -1,0 +1,11 @@
+table {
+    border:2px solid black;
+}
+
+label {
+    font-family: Calibri;
+}
+td {
+    padding: 5px;
+}
+
