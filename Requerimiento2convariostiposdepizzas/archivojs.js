@@ -1,4 +1,7 @@
-document.addEventListener("DOMContentLoaded", aLaEscucha);
+window.onload = function() {
+    aLaEscucha();
+    but1.onclick = calcularPrecio;
+}
 
 function aLaEscucha() {
         document.getElementById("checkboxbarbacoa").addEventListener("change", activarRadio);
@@ -21,7 +24,7 @@ function activarRadio() {
     }
 
     for (clasica3 of clasicas3) {
-        clasica3.disabled = !document.getElementById("checkboxcarbonara").checked;
+        clasica3.disabled = !document.getElementById("checkboxhawaiana").checked;
     }
 }
 
@@ -56,7 +59,7 @@ function calcularPrecio() {
             break;
         }
         precioTamañoTotal=precioTamañoTotal+precioTamaño;
-}
+    }
     
     // Precio total de los ingredientes
     //Dado que todos cuestan 1 €, su precio es igual al número de ellos y podemos usar length

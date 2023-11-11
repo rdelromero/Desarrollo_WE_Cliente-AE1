@@ -2,10 +2,13 @@ table {
     border:2px solid black;
 }
 
-label {
+body {
     font-family: Calibri;
 }
 td {
     padding: 5px;
 }
+#inputnumber1 {
+    width: 40px;
 
+}

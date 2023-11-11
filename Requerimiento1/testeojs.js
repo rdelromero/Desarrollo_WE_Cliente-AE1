@@ -1,3 +1,7 @@
+window.onload = function() {
+        cargar();
+    }
+    
 function cargar(){
 
     //Título de la pag
@@ -77,10 +81,10 @@ function cargar(){
 
     //Teléfono: label e input. El teléfono es type number.
     const tlflabel = document.createElement("label");
-    tlflabel.setAttribute("for", "numerotelefono");
+    tlflabel.setAttribute("for", "telefono")
     tlflabel.textContent = "Introduzca su número de teléfono ";
     const tlfinput = document.createElement("input");
-    tlfinput.setAttribute("id", "numerotelefono");
+    tlfinput.setAttribute("id", "telefono");
     tlfinput.setAttribute("type", "number");
     tlfinput.setAttribute("placeholder", "Teléfono");
     
@@ -233,6 +237,7 @@ function cargar(){
     img2.setAttribute("id", "imagen2");
     img2.setAttribute("width", "20%");
     img2.setAttribute("width", "20%");
+    img2.setAttribute("display", "in-line");
     img2.src = "airsoft1.webp";
 
     //-------------------SELECT--------------------------------------
@@ -295,8 +300,7 @@ function cargar(){
     btnwipe.setAttribute("type", "reset");
     btnwipe.setAttribute("value", "Limpiar formulario");
     btnwipe.addEventListener("click", recargarPagina);
-    
-    //---------------------------------------------------------------------------------------
+      
     //El contenedor formarContainer tiene por hijos a elementoh1 y a formulario
     formarContainer.appendChild(elementoh1);
     formarContainer.appendChild(formulario);

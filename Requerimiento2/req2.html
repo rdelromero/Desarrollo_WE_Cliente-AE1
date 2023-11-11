@@ -8,8 +8,9 @@
     </head>
 
     <body>
-        <h1>Pedido de Pizza</h1>
+        <h2>Pedido de Pizza</h2>
         <form id="pizzaForm">
+            <p>Datos personales</p>
             <!--Creamos una tabla para tener mejor ordenados los datos personales-->
             <!--Cada celda de la tabla contiene un label o un input-->
             <table>
@@ -31,39 +32,60 @@
                     <td colspan="2"><input type="email" id="dircorele" placeholder="Introduce tu email" size="45" required></td>
                 </tr>
             </table>
-            <br>
-            <!--Div con tres radios, un radio para cada tamaño de pizza-->
-            <div>
-                <label>Tamaño:</label><br>
-                <input type="radio" id="radio1" class="pizza" name="tamano" value="pequena">
-                <label for="radio1">Pequeña (5€)</label><br>
-                <input type="radio" id="radio2" class="pizza" name="tamano" value="mediana">
-                <label for="radio2">Mediana (10€)</label><br>
-                <input type="radio" id="radio3" class="pizza" name="tamano" value="grande">
-                <label for="radio3">Grande (15€)</label><br>
-            </div>
-            <br>
+            <p>Tamaño<p>
+            <table>
+                <tr>
+                    <td><input type="radio" id="radio1" class="pizza" name="tamano" value=5></td>
+                    <td><label for="radio1">Pequeña</label></td>
+                    <td>5 €</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="radio2" class="pizza" name="tamano" value=10></td>
+                    <td><label for="radio2">Mediana</label></td>
+                    <td>10 €</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="radio3" class="pizza" name="tamano" value=15></td>
+                    <td><label for="radio3">Grande</label></td>
+                    <td>15 €</td>
+                </tr>
+            </table>
             <!--Div con cuatro checkbox, un checkbox para cada ingrediente-->
-            <div>
-                <label>Ingredientes (al menos uno):</label><br>
-                <input type="checkbox" id="checkbox1"name="ingredientes" value="queso"> 
-                <label for="checkbox1">Queso (+1€)</label><br>
-                <input type="checkbox" id="checkbox2" name="ingredientes" value="jamón"> 
-                <label for="checkbox2">Jamón (+1€)</label><br>
-                <input type="checkbox" id="checkbox3" name="ingredientes" value="champiñones">
-                <label for="checkbox3">Champiñones(+1€)</label><br>
-                <input type="checkbox" id="checkbox4" name="ingredientes" value="aceitunas">
-                <label for="checkbox4">Aceitunas (+1€)</label><br>
-            </div>
+            <p>Extras (elegir al menos uno)</p>
+            <table>
+                <tr>
+                    <td><input type="checkbox" id="checkbox1"name="ingredientesExtras" value=1.10></td>
+                    <td><label for="checkbox1">Queso</label></td>
+                    <td>+1,10 €</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="checkbox2"name="ingredientesExtras" value=1.20></td>
+                    <td><label for="checkbox2">Jamón York</label></td>
+                    <td>+1,20 €</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="checkbox3"name="ingredientesExtras" value=0.90></td>
+                    <td><label for="checkbox3">Champiñones</label></td>
+                    <td>+0,90 €</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="checkbox4"name="ingredientesExtras" value=1.00></td>
+                    <td><label for="checkbox4">Aceitunas negras</label></td>
+                    <td>+1,00 €</td>
+                </tr>
+            </table>
             <br>
             <!--Div con button e input de reset-->
             <div>
-                <button type="button" onclick="calcularPrecio()">Procesar el pedido</button>
+                <label for="num1">Cantidad</label>
+                <input type="number" id="inputnumber1" min=1 max=5 value=1><br>
+                <br>
+                <button type="button" id="but1">Procesar el pedido</button>
                 <input type="reset" value="Limpiar formulario">
             </div>
         </form>
         <!--Div que va a contener el precio del pedido-->
-        <div id="precioTotal" style="display: none;">
+        <div id="precioTotal" style="display: none;"></div>
             <h2>Precio Total del Pedido:</h2>
             <p id="precio"></p>
         </div>
